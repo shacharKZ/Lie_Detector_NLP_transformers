@@ -1,0 +1,115 @@
+
+
+hotels_dev accuracy result: 0.525
+{'test_loss': 0.7521744966506958, 'test_accuracy': 0.525, 'test_eval_accuracy': 0.525, 'test_eval_dev_accuracy': 0.525, 'test_runtime': 1.6131, 'test_samples_per_second': 99.189, 'test_steps_per_second': 1.24}
+
+reviews_dev accuracy result: 0.4420731707317073
+{'test_loss': 0.8327061533927917, 'test_accuracy': 0.4420731707317073, 'test_eval_accuracy': 0.4420731707317073, 'test_eval_dev_accuracy': 0.4420731707317073, 'test_runtime': 13.2929, 'test_samples_per_second': 98.699, 'test_steps_per_second': 0.828}
+
+deathPenalty_dev accuracy result: 0.6666666666666666
+{'test_loss': 0.89281165599823, 'test_accuracy': 0.6666666666666666, 'test_eval_accuracy': 0.6666666666666666, 'test_eval_dev_accuracy': 0.6666666666666666, 'test_runtime': 0.415, 'test_samples_per_second': 101.214, 'test_steps_per_second': 2.41}
+
+bestFriend_dev accuracy result: 0.6190476190476191
+{'test_loss': 0.6595878005027771, 'test_accuracy': 0.6190476190476191, 'test_eval_accuracy': 0.6190476190476191, 'test_eval_dev_accuracy': 0.6190476190476191, 'test_runtime': 0.4154, 'test_samples_per_second': 101.115, 'test_steps_per_second': 2.408}
+
+abortion_dev accuracy result: 0.75
+{'test_loss': 0.609861433506012, 'test_accuracy': 0.75, 'test_eval_accuracy': 0.75, 'test_eval_dev_accuracy': 0.75, 'test_runtime': 0.4502, 'test_samples_per_second': 97.739, 'test_steps_per_second': 2.221}
+
+mix_hotels_reviews_v2 accuracy result: 0.46824019437695247
+{'test_loss': 0.8087725639343262, 'test_accuracy': 0.46824019437695247, 'test_eval_accuracy': 0.46824019437695247, 'test_eval_dev_accuracy': 0.46824019437695247, 'test_runtime': 29.3188, 'test_samples_per_second': 98.265, 'test_steps_per_second': 0.784}
+
+mix_bestFriend_abortion accuracy result: 0.7763578274760383
+{'test_loss': 0.4298575520515442, 'test_accuracy': 0.7763578274760383, 'test_eval_accuracy': 0.7763578274760383, 'test_eval_dev_accuracy': 0.7763578274760383, 'test_runtime': 3.1911, 'test_samples_per_second': 98.085, 'test_steps_per_second': 0.94}
+
+mix_deathPenalty_bestFriend accuracy result: 0.6412698412698413
+{'test_loss': 0.7228335738182068, 'test_accuracy': 0.6412698412698413, 'test_eval_accuracy': 0.6412698412698413, 'test_eval_dev_accuracy': 0.6412698412698413, 'test_runtime': 3.1649, 'test_samples_per_second': 99.53, 'test_steps_per_second': 0.948}
+
+mix_deathPenalty_abortion accuracy result: 0.7866242038216561
+{'test_loss': 0.5300934314727783, 'test_accuracy': 0.7866242038216561, 'test_eval_accuracy': 0.7866242038216561, 'test_eval_dev_accuracy': 0.7866242038216561, 'test_runtime': 3.2287, 'test_samples_per_second': 97.253, 'test_steps_per_second': 0.929}
+
+
+The training args for this run were:TrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+bf16=False,
+bf16_full_eval=False,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.EPOCH,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=True,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=./logs_15_52_13/runs/Jan28_15-52-13_nlpgpu2021w-0020,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=dev_accuracy,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=7,
+output_dir=./logs_15_52_13,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=128,
+per_device_train_batch_size=10,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=./logs_15_52_13,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.EPOCH,
+save_total_limit=None,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
