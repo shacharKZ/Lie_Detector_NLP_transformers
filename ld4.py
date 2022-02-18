@@ -74,9 +74,9 @@ def metric_fn(predictions):
             'eval_dev_accuracy': curr_acc}
 
 
-def build_and_evaluate_model(train_with, max_train_epochs=8, min_train_epochs=3, seed=42, per_device_train_batch_size=10, per_device_eval_batch_size=128,
-                             learning_rate=1e-05, weight_decay=0, adam_beta1=0.9, warmup_ratio=0, adafactor=False,
-                             skip_bad_results: float = 0, save_score=True):
+def build_and_evaluate_model(train_with, max_train_epochs=12, min_train_epochs=2, seed=42, per_device_train_batch_size=10,
+                             per_device_eval_batch_size=128, learning_rate=1e-05, weight_decay=0, adam_beta1=0.9,
+                             warmup_ratio=0, adafactor=False, skip_bad_results: float = 0, save_score=True):
     if train_with not in tokenized_ds:
         print(f"\n\n<<<<<<<<<< Can't find {train_with} in datasets... >>>>>>>>>>>>>>>>")
         return
@@ -150,9 +150,9 @@ def build_and_evaluate_model(train_with, max_train_epochs=8, min_train_epochs=3,
 
 
 if __name__ == '__main__':
-    for lr in [1e-5, 3e-5, 5e-5, 6e-5, 7e-5]:
+    for lr in [1e-5, 3e-5, 5e-5, 7e-5]:
         for ds_name in tokenized_ds:
-            if ('dev' not in ds_name) and ('test' not in ds_name):
-                build_and_evaluate_model(ds_name, max_train_epochs=9, learning_rate=lr)
+            if 'train' in ds_name:
+                build_and_evaluate_model(ds_name, max_train_epochs=12, learning_rate=lr)
 
     print("DONE")
