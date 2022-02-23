@@ -22,33 +22,123 @@ now = datetime.datetime.now()
 current_time = now.strftime("%H_%M_%S")
 
 # mix train set
+# all_ds = {
+#     'abortaion_test40': './datasets v2/abortaion_test40.csv',
+#     'abortaion_train160': './datasets v2/abortaion_train160.csv',
+#     'amazonReviews_test40': './datasets v2/amazonReviews_test40.csv',
+#     'amazonReviews_train1000': './datasets v2/amazonReviews_train1000.csv',
+#     'amazonReviews_train160': './datasets v2/amazonReviews_train160.csv',
+#     'bestFriend_test40': './datasets v2/bestFriend_test40.csv',
+#     'bestFriend_train160': './datasets v2/bestFriend_train160.csv',
+#     'deathPenalty_test40': './datasets v2/deathPenalty_test40.csv',
+#     'deathPenalty_train160': './datasets v2/deathPenalty_train160.csv',
+#     'hotels_test40': './datasets v2/hotels_test40.csv',
+#     'hotels_train1000': './datasets v2/hotels_train1000.csv',
+#     'hotels_train160': './datasets v2/hotels_train160.csv',
+#
+#     'mix_abortaion_bestFriend_train160': './datasets v2/abortaion_bestFriend_train160.csv',
+#     'mix_abortaion_bestFriend_train320': './datasets v2/abortaion_bestFriend_train320.csv',
+#     'mix_abortaion_deathPenalty_train160': './datasets v2/abortaion_deathPenalty_train160.csv',
+#     'mix_abortaion_deathPenalty_train320': './datasets v2/abortaion_deathPenalty_train320.csv',
+#     'mix_bestFriend_deathPenalty_train160': './datasets v2/bestFriend_deathPenalty_train160.csv',
+#     'mix_bestFriend_deathPenalty_train320': './datasets v2/bestFriend_deathPenalty_train320.csv',
+#     'mix_bestFriend_hotels_train160': './datasets v2/bestFriend_hotels_train160.csv',
+#     'mix_bestFriend_hotels_train320': './datasets v2/bestFriend_hotels_train320.csv',
+#     'mix_amazonReviews_abortaion_train160': './datasets v2/amazonReviews_abortaion_train160.csv',
+#     'mix_amazonReviews_bestFriend_train160': './datasets v2/amazonReviews_bestFriend_train160.csv',
+#     'mix_amazonReviews_hotels_train160': './datasets v2/amazonReviews_hotels_train160.csv',
+#     'mix_amazonReviews_hotels_train320': './datasets v2/amazonReviews_hotels_train320.csv',
+# }
+
 all_ds = {
     'abortaion_test40': './datasets v2/abortaion_test40.csv',
-    'abortaion_train160': './datasets v2/abortaion_train160.csv',
     'amazonReviews_test40': './datasets v2/amazonReviews_test40.csv',
-    'amazonReviews_train1000': './datasets v2/amazonReviews_train1000.csv',
-    'amazonReviews_train160': './datasets v2/amazonReviews_train160.csv',
     'bestFriend_test40': './datasets v2/bestFriend_test40.csv',
-    'bestFriend_train160': './datasets v2/bestFriend_train160.csv',
     'deathPenalty_test40': './datasets v2/deathPenalty_test40.csv',
-    'deathPenalty_train160': './datasets v2/deathPenalty_train160.csv',
     'hotels_test40': './datasets v2/hotels_test40.csv',
-    'hotels_train1000': './datasets v2/hotels_train1000.csv',
-    'hotels_train160': './datasets v2/hotels_train160.csv',
 
-    'mix_abortaion_bestFriend_train160': './datasets v2/abortaion_bestFriend_train160.csv',
-    'mix_abortaion_bestFriend_train320': './datasets v2/abortaion_bestFriend_train320.csv',
-    'mix_abortaion_deathPenalty_train160': './datasets v2/abortaion_deathPenalty_train160.csv',
-    'mix_abortaion_deathPenalty_train320': './datasets v2/abortaion_deathPenalty_train320.csv',
-    'mix_bestFriend_deathPenalty_train160': './datasets v2/bestFriend_deathPenalty_train160.csv',
-    'mix_bestFriend_deathPenalty_train320': './datasets v2/bestFriend_deathPenalty_train320.csv',
-    'mix_bestFriend_hotels_train160': './datasets v2/bestFriend_hotels_train160.csv',
-    'mix_bestFriend_hotels_train320': './datasets v2/bestFriend_hotels_train320.csv',
-    'mix_amazonReviews_abortaion_train160': './datasets v2/amazonReviews_abortaion_train160.csv',
-    'mix_amazonReviews_bestFriend_train160': './datasets v2/amazonReviews_bestFriend_train160.csv',
-    'mix_amazonReviews_hotels_train160': './datasets v2/amazonReviews_hotels_train160.csv',
-    'mix_amazonReviews_hotels_train320': './datasets v2/amazonReviews_hotels_train320.csv',
+    # 'abortaion_train120': './datasets v3/abortaion_train120.csv',
+    # 'abortaion_train40': './datasets v3/abortaion_train40.csv',
+    # 'abortaion_train80': './datasets v3/abortaion_train80.csv',
+    # 'amazonReviews_train120': './datasets v3/amazonReviews_train120.csv',
+    # 'amazonReviews_train40': './datasets v3/amazonReviews_train40.csv',
+    # 'amazonReviews_train80': './datasets v3/amazonReviews_train80.csv',
+    # 'bestFriend_train120': './datasets v3/bestFriend_train120.csv',
+    # 'bestFriend_train40': './datasets v3/bestFriend_train40.csv',
+    # 'bestFriend_train80': './datasets v3/bestFriend_train80.csv',
+    # 'deathPenalty_train120': './datasets v3/deathPenalty_train120.csv',
+    # 'deathPenalty_train40': './datasets v3/deathPenalty_train40.csv',
+    # 'deathPenalty_train80': './datasets v3/deathPenalty_train80.csv',
+    # 'hotels_train120': './datasets v3/hotels_train120.csv',
+    # 'hotels_train40': './datasets v3/hotels_train40.csv',
+    # 'hotels_train80': './datasets v3/hotels_train80.csv',
+    # 'mix_abortaion_amazonReviews_train160': './datasets v3/mix_abortaion_amazonReviews160.csv',
+    # 'mix_abortaion_amazonReviews_train240': './datasets v3/mix_abortaion_amazonReviews240.csv',
+    # 'mix_abortaion_amazonReviews_train320': './datasets v3/mix_abortaion_amazonReviews320.csv',
+    # 'mix_abortaion_amazonReviews_train80': './datasets v3/mix_abortaion_amazonReviews80.csv',
+    # 'mix_abortaion_bestFriend_train160': './datasets v3/mix_abortaion_bestFriend160.csv',
+    # 'mix_abortaion_bestFriend_train240': './datasets v3/mix_abortaion_bestFriend240.csv',
+    # 'mix_abortaion_bestFriend_train320': './datasets v3/mix_abortaion_bestFriend320.csv',
+    # 'mix_abortaion_bestFriend_train80': './datasets v3/mix_abortaion_bestFriend80.csv',
+    # 'mix_abortaion_deathPenalty_train160': './datasets v3/mix_abortaion_deathPenalty160.csv',
+    # 'mix_abortaion_deathPenalty_train240': './datasets v3/mix_abortaion_deathPenalty240.csv',
+    # 'mix_abortaion_deathPenalty_train320': './datasets v3/mix_abortaion_deathPenalty320.csv',
+    # 'mix_abortaion_deathPenalty_train80': './datasets v3/mix_abortaion_deathPenalty80.csv',
+    # 'mix_abortaion_hotels_train160': './datasets v3/mix_abortaion_hotels160.csv',
+    # 'mix_abortaion_hotels_train240': './datasets v3/mix_abortaion_hotels240.csv',
+    # 'mix_abortaion_hotels_train320': './datasets v3/mix_abortaion_hotels320.csv',
+    # 'mix_abortaion_hotels_train80': './datasets v3/mix_abortaion_hotels80.csv',
+    # 'mix_amazonReviews_bestFriend_train160': './datasets v3/mix_amazonReviews_bestFriend160.csv',
+    # 'mix_amazonReviews_bestFriend_train240': './datasets v3/mix_amazonReviews_bestFriend240.csv',
+    # 'mix_amazonReviews_bestFriend_train320': './datasets v3/mix_amazonReviews_bestFriend320.csv',
+    # 'mix_amazonReviews_bestFriend_train80': './datasets v3/mix_amazonReviews_bestFriend80.csv',
+    # 'mix_amazonReviews_deathPenalty_train160': './datasets v3/mix_amazonReviews_deathPenalty160.csv',
+    # 'mix_amazonReviews_deathPenalty_train240': './datasets v3/mix_amazonReviews_deathPenalty240.csv',
+    # 'mix_amazonReviews_deathPenalty_train320': './datasets v3/mix_amazonReviews_deathPenalty320.csv',
+    # 'mix_amazonReviews_deathPenalty_train80': './datasets v3/mix_amazonReviews_deathPenalty80.csv',
+    # 'mix_amazonReviews_hotels_train160': './datasets v3/mix_amazonReviews_hotels160.csv',
+    # 'mix_amazonReviews_hotels_train2000': './datasets v3/mix_amazonReviews_hotels2000.csv',
+    # 'mix_amazonReviews_hotels_train240': './datasets v3/mix_amazonReviews_hotels240.csv',
+    # 'mix_amazonReviews_hotels_train320': './datasets v3/mix_amazonReviews_hotels320.csv',
+    # 'mix_amazonReviews_hotels_train80': './datasets v3/mix_amazonReviews_hotels80.csv',
+    # 'mix_bestFriend_deathPenalty_train160': './datasets v3/mix_bestFriend_deathPenalty160.csv',
+    # 'mix_bestFriend_deathPenalty_train240': './datasets v3/mix_bestFriend_deathPenalty240.csv',
+    # 'mix_bestFriend_deathPenalty_train320': './datasets v3/mix_bestFriend_deathPenalty320.csv',
+    # 'mix_bestFriend_deathPenalty_train80': './datasets v3/mix_bestFriend_deathPenalty80.csv',
+    # 'mix_bestFriend_hotels_train160': './datasets v3/mix_bestFriend_hotels160.csv',
+    # 'mix_bestFriend_hotels_train240': './datasets v3/mix_bestFriend_hotels240.csv',
+    # 'mix_bestFriend_hotels_train320': './datasets v3/mix_bestFriend_hotels320.csv',
+    # 'mix_bestFriend_hotels_train80': './datasets v3/mix_bestFriend_hotels80.csv',
+    # 'mix_deathPenalty_hotels_train160': './datasets v3/mix_deathPenalty_hotels160.csv',
+    # 'mix_deathPenalty_hotels_train240': './datasets v3/mix_deathPenalty_hotels240.csv',
+    # 'mix_deathPenalty_hotels_train320': './datasets v3/mix_deathPenalty_hotels320.csv',
+    # 'mix_deathPenalty_hotels_train80': './datasets v3/mix_deathPenalty_hotels80.csv'
+
+    'mix3_amazonReviews_bestFriend_hotels_train120': './datasets v4/mix3_amazonReviews_bestFriend_hotels_train120.csv',
+    'mix3_amazonReviews_bestFriend_hotels_train240': './datasets v4/mix3_amazonReviews_bestFriend_hotels_train240.csv',
+    'mix3_amazonReviews_bestFriend_hotels_train360': './datasets v4/mix3_amazonReviews_bestFriend_hotels_train360.csv',
+    'mix3_amazonReviews_bestFriend_hotels_train480': './datasets v4/mix3_amazonReviews_bestFriend_hotels_train480.csv',
+
+    'mix3_abortaion_bestFriend_deathPenalty_train120': './datasets v4/mix3_abortaion_bestFriend_deathPenalty_train120.csv',
+    'mix3_abortaion_bestFriend_deathPenalty_train240': './datasets v4/mix3_abortaion_bestFriend_deathPenalty_train240.csv',
+    'mix3_abortaion_bestFriend_deathPenalty_train360': './datasets v4/mix3_abortaion_bestFriend_deathPenalty_train360.csv',
+    'mix3_abortaion_bestFriend_deathPenalty_train480': './datasets v4/mix3_abortaion_bestFriend_deathPenalty_train480.csv',
+
+    # 'mix4_abortaion_amazonReviews_bestFriend_deathPenalty_train160': './datasets v4/mix4_abortaion_amazonReviews_bestFriend_deathPenalty_train160.csv',
+    # 'mix4_abortaion_amazonReviews_bestFriend_deathPenalty_train320': './datasets v4/mix4_abortaion_amazonReviews_bestFriend_deathPenalty_train320.csv',
+    # 'mix4_abortaion_amazonReviews_bestFriend_deathPenalty_train480': './datasets v4/mix4_abortaion_amazonReviews_bestFriend_deathPenalty_train480.csv',
+    # 'mix4_abortaion_amazonReviews_bestFriend_deathPenalty_train640': './datasets v4/mix4_abortaion_amazonReviews_bestFriend_deathPenalty_train640.csv',
+
+    'mix5_abortaion_amazonReviews_bestFriend_deathPenalty_hotels_train200': './datasets v4/mix5_abortaion_amazonReviews_bestFriend_deathPenalty_hotels_train200.csv',
+    'mix5_abortaion_amazonReviews_bestFriend_deathPenalty_hotels_train400': './datasets v4/mix5_abortaion_amazonReviews_bestFriend_deathPenalty_hotels_train400.csv',
+    'mix5_abortaion_amazonReviews_bestFriend_deathPenalty_hotels_train600': './datasets v4/mix5_abortaion_amazonReviews_bestFriend_deathPenalty_hotels_train600.csv',
+    'mix5_abortaion_amazonReviews_bestFriend_deathPenalty_hotels_train800': './datasets v4/mix5_abortaion_amazonReviews_bestFriend_deathPenalty_hotels_train800.csv',
+
+
+
+
 }
+
 raw_ds = load_dataset("csv", data_files=all_ds)
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -129,7 +219,7 @@ def build_and_evaluate_model(train_with, max_train_epochs=12, min_train_epochs=2
 
         res_dic = {}
         for curr_dev in tokenized_ds:
-            if 'train' not in curr_dev:
+            if 'test' in curr_dev:
                 curr_res = trainer.predict(tokenized_ds[curr_dev])
                 res_dic[curr_dev] = curr_res
                 print(f'\nAccuracy score on {curr_dev} is = {curr_res.metrics["test_accuracy"]}')

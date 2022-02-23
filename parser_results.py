@@ -14,7 +14,7 @@ def parser_file(path, file_name) -> str:
     res = f'\"{file_name}\",\"{train_name}\",{train_size},{epochs},{lr}'
     with open(f'{path}/{file_name}') as f:
         for line in f:
-            if 'accuracy result' in line and '{' not in line:
+            if 'accuracy result' in line and '_test' in line and '{' not in line:
                 tmp_index = line.rfind(" ")
                 res_num = float(line[tmp_index:-1])
                 # print(res_num)
@@ -22,7 +22,7 @@ def parser_file(path, file_name) -> str:
     return res
 
 
-def parser_all_files(dir_name='./results170222'):
+def parser_all_files(dir_name='./results220222'):
     results_files = os.listdir(dir_name)
     results_csv = "file_name,trian_name,train_size,epochs,lr,abortaion_test40,amazonReviews_test40,bestFriend_test40,deathPenalty_test40,hotels_test40\n"
     for file_name in results_files:
