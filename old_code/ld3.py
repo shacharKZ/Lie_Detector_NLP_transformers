@@ -9,7 +9,6 @@ from datasets import load_dataset, load_metric
 from transformers import TrainingArguments, Trainer, AutoModelForSequenceClassification, AutoTokenizer
 import os
 
-# model_name = 'gpt2'
 model_name = 'roberta-base'
 
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
